@@ -59,10 +59,13 @@ html,body{
 #pbtm{
     width: 100%;
     height: calc(100% - 100px);
-    padding: 10px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
     gap: 10px;
     flex-wrap: wrap;
+    color: red;
 }
 .bubble{
     width: 40px;
