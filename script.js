@@ -74,6 +74,7 @@ function outTimer(){
             document.querySelector('#timerval').textContent=timer;
         }else{
             clearTimeout(timerint);
+            document.querySelector('#pbtm').innerHTML=`<h1>Game is Over</h1>`;
         }
     },1000)
 }
@@ -91,11 +92,11 @@ outTimer()
 // }
 // getHit()
 
-
+var hitrn=0;
 
 function getHit(){
-    var rn=Math.floor(Math.random()*10);
-    document.querySelector('#hitval').textContent=rn;
+    hitrn=Math.floor(Math.random()*10);
+    document.querySelector('#hitval').textContent=hitrn;
 }
 getHit();
 
@@ -113,3 +114,24 @@ function increaseScore(){
     document.querySelector('#Scorebal').textContent=score;
 }
 // increaseScore()
+
+
+// step----5......
+
+document.querySelector('#pbtm')
+.addEventListener('click',(dets)=>{
+    var clickdnum=Number(dets.target.textContent);
+    // console.log(clickdnum)
+
+    if(hitrn===clickdnum){
+        increaseScore();
+        makeBubble();
+        getHit();
+
+    }else{
+
+    }
+}
+   
+
+)
